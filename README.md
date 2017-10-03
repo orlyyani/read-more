@@ -2,6 +2,12 @@
 
 Read-More is a simple plugin that has been created with :heart: by a bored developer.
 
+# NPM
+
+```
+ npm install vue-read-more --save
+```
+
 # Features!
 
   - Add read more length

@@ -1,13 +1,29 @@
 {
-  "name": "read-more",
+  "name": "vue-read-more",
   "version": "1.0.0",
   "description": "a vue.js read-more plugin",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/orlyyani/read-more.git"
+    "url": "git+https://github.com/orlyyani/read-more.git"
   },
   "author": "orlyjohnyanson@gmail.com",
   "license": "MIT",
-  "homepage": "https://github.com/orlyyani/read-more.git"
+  "homepage": "https://github.com/orlyyani/read-more.git",
+  "bugs": {
+    "url": "https://github.com/orlyyani/read-more/issues"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "read",
+    "more",
+    "read",
+    "less",
+    "view",
+    "more",
+    "vue.js",
+    "vue"
+  ]
 }
