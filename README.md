@@ -4,6 +4,10 @@
 
 Read-More is a simple plugin that has been created with :heart: by a bored developer.
 
+# Examples
+
+For examples, refer to [the demo page](https://orlyyani.github.io/read-more/#/).
+
 # NPM
 
 ```
