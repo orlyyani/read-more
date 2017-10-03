@@ -1,6 +1,7 @@
 # Vue.js Read-More
 
 [![npm version](https://badge.fury.io/js/vue-read-more.svg)](https://badge.fury.io/js/vue-read-more)
+
 Read-More is a simple plugin that has been created with :heart: by a bored developer.
 
 # NPM
