@@ -69,4 +69,4 @@ When you didn't pass something in the `lessStr`, after clicking the read more yo
 
 #### MIT
 Use at your own risk!
-with :love: by Lyor
+with :heart: by Lyor
