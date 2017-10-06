@@ -2,7 +2,7 @@
 
 [![npm version](https://badge.fury.io/js/vue-read-more.svg)](https://badge.fury.io/js/vue-read-more)
 
-Read-More is a simple plugin that has been created with :heart: by a bored developer.
+Read-More is a simple plugin fo vue.js that has been created with :heart: by a bored developer.
 
 # Examples
 
@@ -31,13 +31,40 @@ For examples, refer to [the demo page](https://orlyyani.github.io/read-more/#/).
 
 # Sample
 
+You can use either the Component approach or the Directive approach.
+
+### Component
+
+```
+<template>
+  <div class="hello">
+    <read-more more-str="read more" :text="msg" link="#" less-str="read less" :max-chars="50"></read-more>
+    <read-more more-str="read more" less-str="read less" :text="msg2" link="#"></read-more>
+  </div>
+</template>
+
+<script>
+export default {
+  data () {
+    return {
+      msg: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
+      msg2: 'Lorem ipsum dolor sit amet'
+    }
+  }
+}
+</script>
+```
+
+### Directive
+
+*Note:*
+When using the directive approach, you will always have `lessStr` after clicking the read more and you can't modify the `moreStr` and the `lessStr` unless you will use the Component approach.
+
 ```
 <template>
   <div class="hello">
     <div v-readMore:25="msg"></div>
     <div v-readMore:100="msg2"></div>
-    <read-more more-str="read more" :text="msg" link="#" less-str="read less" :max-chars="50"></read-more>
-    <read-more more-str="read more" less-str="read less" :text="msg2" link="#"></read-more>
   </div>
 </template>
 
