@@ -1,9 +1,9 @@
-let template = '<p>{{formattedString}} ' 
+let template = '<div><p v-html="formattedString"></p> ' 
 	template += '<span v-show="text.length > maxChars">'
 	template += ' <a :href="link" id="readmore" v-show="!isReadMore" v-on:click="triggerReadMore($event, true)">{{moreStr}}</a>' 
 	template += ' <a :href="link" id="readmore" v-show="isReadMore" v-on:click="triggerReadMore($event, false)">{{lessStr}}</a>' 
 	template += '</span>'
-	template += '</p>'
+	template += '</div>'
 
 export default{
 		template,
@@ -41,7 +41,7 @@ export default{
 				let __val_container = this.text;
 
 				if(!this.isReadMore){
-					__val_container = __val_container.substring(0,this.maxChars);
+					__val_container = __val_container.substring(0,this.maxChars) + '...';
 				}
 
 				return(__val_container);
