@@ -38,13 +38,13 @@ export default{
 
 		computed: {
 			formattedString(){
-				let __val_container = this.text;
+				let val_container = this.text;
 
 				if(!this.isReadMore){
-					__val_container = __val_container.substring(0,this.maxChars) + '...';
+					val_container = val_container.substring(0,this.maxChars) + '...';
 				}
 
-				return(__val_container);
+				return(val_container);
 			}
 		},
 
