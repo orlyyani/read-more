@@ -1,6 +1,6 @@
 {
   "name": "vue-read-more",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "a vue.js read-more plugin",
   "main": "index.js",
   "repository": {
