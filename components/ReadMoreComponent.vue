@@ -1,12 +1,15 @@
-let template = '<div><p v-html="formattedString"></p> ' 
-	template += '<span v-show="text.length > maxChars">'
-	template += ' <a :href="link" id="readmore" v-show="!isReadMore" v-on:click="triggerReadMore($event, true)">{{moreStr}}</a>' 
-	template += ' <a :href="link" id="readmore" v-show="isReadMore" v-on:click="triggerReadMore($event, false)">{{lessStr}}</a>' 
-	template += '</span>'
-	template += '</div>'
+<template>
+	<div>
+		<p v-html="formattedString"></p>
+		<span v-show="text.length > maxChars">
+			<a :href="link" id="readmore" v-show="!isReadMore" v-on:click="triggerReadMore($event, true)">{{moreStr}}</a>
+			<a :href="link" id="readmore" v-show="isReadMore" v-on:click="triggerReadMore($event, false)">{{lessStr}}</a>
+		</span>
+	</div>
+</template>
 
-export default{
-		template,
+<script>
+	export default{
 		props: {
 			moreStr: {
 				type: String,
@@ -38,7 +41,7 @@ export default{
 
 		computed: {
 			formattedString(){
-				let val_container = this.text;
+				var val_container = this.text;
 
 				if(!this.isReadMore && this.text.length > this.maxChars){
 					val_container = val_container.substring(0,this.maxChars) + '...';
@@ -46,10 +49,6 @@ export default{
 
 				return(val_container);
 			}
-		},
-
-		mounted() {
-
 		},
 
 		methods: {
@@ -62,3 +61,4 @@ export default{
 			}
 		}
 	}
+</script>

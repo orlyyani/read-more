@@ -1,16 +1,16 @@
 export default {
 	twoWay: true,
 	bind: function(el, bind, vn) {
-		let val_container = bind.value;
+		var val_container = bind.value;
 		
 		if(bind.value.length > bind.arg){
 
 			vn.elm.textContent = bind.value.substring(0,bind.arg)
-			let read_more = document.createElement('a');
+			var read_more = document.createElement('a');
 	    read_more.href = '#';
 	    read_more.text = 'read more';
 
-	    let read_less = document.createElement('a');
+	    var read_less = document.createElement('a');
 	    read_less.href = '#';
 	    read_less.text = 'read less';
 

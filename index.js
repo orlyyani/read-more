@@ -1,4 +1,4 @@
-import ReadMoreComponent from './components/ReadMoreComponent.js'
+import ReadMoreComponent from './components/ReadMoreComponent'
 import ReadMoreDirective from './directives/ReadMoreDirective.js'
 
 export default {
