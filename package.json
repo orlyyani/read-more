@@ -2,7 +2,12 @@
   "name": "vue-read-more",
   "version": "1.1.0",
   "description": "a vue.js read-more plugin",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "scripts": {
+    "build:base": "cross-env NODE_ENV=production webpack --config webpack.config.js --progress --hide-modules",
+    "build:ssr": "cross-env NODE_ENV=production webpack --config webpack.config.ssr.js --progress --hide-modules",
+    "build": "npm run build:base && npm run build:ssr"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/orlyyani/read-more.git"
@@ -13,9 +18,6 @@
   "bugs": {
     "url": "https://github.com/orlyyani/read-more/issues"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "keywords": [
     "read",
     "more",
@@ -25,5 +27,12 @@
     "more",
     "vue.js",
     "vue"
-  ]
+  ],
+  "devDependencies": {
+    "@vue/component-compiler-utils": "^1.0.0"
+  },
+  "dependencies": {
+    "cross-env": "^5.1.4",
+    "webpack-merge": "^4.1.2"
+  }
 }
