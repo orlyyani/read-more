@@ -1,5 +1,5 @@
-import ReadMoreComponent from './components/ReadMoreComponent'
-import ReadMoreDirective from './directives/ReadMoreDirective.js'
+import ReadMoreComponent from './ReadMoreComponent.vue'
+import ReadMoreDirective from './ReadMoreDirective.js'
 
 export default {
   install: function (Vue, options) {
