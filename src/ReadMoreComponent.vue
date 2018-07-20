@@ -1,6 +1,7 @@
 <template>
 	<div>
 		<p v-html="formattedString">
+      <span v-html="formattedString"> </span>
 			<span v-show="text.length > maxChars">
 				<a :href="link" id="readmore" v-show="!isReadMore" v-on:click="triggerReadMore($event, true)">{{moreStr}}</a>
 				<a :href="link" id="readmore" v-show="isReadMore" v-on:click="triggerReadMore($event, false)">{{lessStr}}</a>
