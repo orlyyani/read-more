@@ -1,10 +1,11 @@
 <template>
 	<div>
-		<p v-html="formattedString"></p>
-		<span v-show="text.length > maxChars">
-			<a :href="link" id="readmore" v-show="!isReadMore" v-on:click="triggerReadMore($event, true)">{{moreStr}}</a>
-			<a :href="link" id="readmore" v-show="isReadMore" v-on:click="triggerReadMore($event, false)">{{lessStr}}</a>
-		</span>
+		<p v-html="formattedString">
+			<span v-show="text.length > maxChars">
+				<a :href="link" id="readmore" v-show="!isReadMore" v-on:click="triggerReadMore($event, true)">{{moreStr}}</a>
+				<a :href="link" id="readmore" v-show="isReadMore" v-on:click="triggerReadMore($event, false)">{{lessStr}}</a>
+			</span>
+		</p>
 	</div>
 </template>
 
