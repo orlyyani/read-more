@@ -2,8 +2,8 @@
 	<div>
 		<p v-html="formattedString"></p>
 		<span v-show="text.length > maxChars">
-			<a :href="link" id="readmore" v-show="!isReadMore" v-on:click="triggerReadMore($event, true)">{{moreStr}}</a>
-			<a :href="link" id="readmore" v-show="isReadMore" v-on:click="triggerReadMore($event, false)">{{lessStr}}</a>
+			<a :href="link" id="readmore" v-show="!isReadMore" @click="triggerReadMore($event, true)">{{moreStr}}</a>
+			<a :href="link" id="readmore" v-show="isReadMore" @click="triggerReadMore($event, false)">{{lessStr}}</a>
 		</span>
 	</div>
 </template>
@@ -33,9 +33,9 @@ export default {
     }
   },
 
-  data() {
+  data: function() {
     return {
-      isReadMore: false
+      isReadMore: false,
     };
   },
 
