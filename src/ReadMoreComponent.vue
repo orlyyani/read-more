@@ -33,14 +33,14 @@ export default {
     }
   },
 
-  data() {
+  data: function(){
     return {
       isReadMore: false
     };
   },
 
   computed: {
-    formattedString() {
+    formattedString: function formattedString() {
       var val_container = this.text;
 
       if (!this.isReadMore && this.text.length > this.maxChars) {
@@ -52,7 +52,7 @@ export default {
   },
 
   methods: {
-    triggerReadMore(e, b) {
+    triggerReadMore: function triggerReadMore(e, b) {
       if (this.link == "#") {
         e.preventDefault();
       }
